@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Title from "@/src/components/Title";
-import { getMarkdownBySlug } from "@/src/lib/markdown";
+import { getMarkdownBySlug, getMarkdownFiles } from "@/src/lib/markdown";
 import { remark } from "remark";
 import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
@@ -31,7 +31,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <div className="flex flex-col gap-4">
           <div>
             <Title>{article?.frontmatter.title}</Title>
-            <p className="text-sm text-gray-500">{article?.frontmatter.tags.map((tag: string) => `#${tag}`).join(" ")}</p>
+            <p className="text-sm text-gray-500">
+              {article?.frontmatter.tags
+                .map((tag: string) => `#${tag}`)
+                .join(" ")}
+            </p>
           </div>
 
           <img
@@ -49,4 +53,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </section>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const articles = getMarkdownFiles("src/articles");
+
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
 }

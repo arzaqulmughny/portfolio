@@ -5,3 +5,9 @@ export default function Page({ params }: { params: { slug: string } }) {
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  return [
+    { slug: 'index' }
+  ];
+}

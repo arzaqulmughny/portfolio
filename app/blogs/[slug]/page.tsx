@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <div className="flex flex-col gap-4">
           <div>
             <Title>{article?.frontmatter.title}</Title>
-            <p className="text-sm text-gray-500">{article?.frontmatter.tags.map((tag) => `#${tag}`).join(" ")}</p>
+            <p className="text-sm text-gray-500">{article?.frontmatter.tags.map((tag: string) => `#${tag}`).join(" ")}</p>
           </div>
 
           <img

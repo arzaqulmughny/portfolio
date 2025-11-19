@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Title from "@/src/components/Title";
 import { getMarkdownBySlug, getMarkdownFiles } from "@/src/lib/markdown";
+import { Metadata } from "next";
 import { remark } from "remark";
 import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
@@ -61,4 +62,21 @@ export async function generateStaticParams() {
   return articles.map((article) => ({
     slug: article.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const article = getMarkdownBySlug("src/articles", params.slug);
+
+  return {
+    title: article?.frontmatter?.title ?? "Blog - Arza",
+    description: article?.frontmatter?.description ?? "Artikel oleh Arza.",
+    openGraph: {
+      title: article?.frontmatter?.title,
+      description: article?.frontmatter?.description,
+    },
+  };
 }

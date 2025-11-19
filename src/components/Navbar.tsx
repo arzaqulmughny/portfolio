@@ -4,19 +4,19 @@ export default function Navbar() {
   const links = [
     {
       'href': '/',
-      'title': 'Home'
+      'title': 'Beranda'
     },
     {
       'href': '/blogs',
-      'title': 'Blogs'
+      'title': 'Blog'
     },
     {
       'href': '/projects',
-      'title': 'Projects'
+      'title': 'Proyek'
     },
     {
       'href': '/about',
-      'title': 'About Me'
+      'title': 'Tentang Saya'
     },
   ];
 

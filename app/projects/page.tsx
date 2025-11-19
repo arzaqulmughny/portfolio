@@ -1,7 +1,7 @@
-import Footer from "@/src/components/Footer";
 import ProjectItem from "@/src/components/ProjectItem";
 import Title from "@/src/components/Title";
 import { getMarkdownFiles } from "@/src/lib/markdown";
+import type { Metadata } from "next";
 
 export default function Projects() {
   const projects = getMarkdownFiles("src/projects");
@@ -17,18 +17,18 @@ export default function Projects() {
   return (
     <>
       <section className="flex flex-col gap-5">
-        <Title>Projects</Title>
+        <Title>Proyek</Title>
         <p className="text-neutral-300">
-          A collection of projects I’ve worked on — both personal experiments
-          and professional work done for companies. Each one reflects a step in
-          my journey of learning and building meaningful software.
+          Kumpulan proyek yang pernah saya buat, mulai dari eksperimen pribadi hingga pekerjaan
+          profesional. Semuanya menjadi bagian dari perjalanan saya dalam
+          belajar dan membangun software yang bermanfaat.
         </p>
       </section>
 
       {/* Personal Projects */}
       <section className="flex flex-col gap-5">
-        <h2 className="text-xl font-semibold">Personal Projects</h2>
-        
+        <h2 className="text-xl font-semibold">Proyek Pribadi</h2>
+
         {personalProjects.length > 0 ? (
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {personalProjects.map((project) => (
@@ -43,14 +43,14 @@ export default function Projects() {
             ))}
           </ul>
         ) : (
-          <p className="text-neutral-300">No personal projects available.</p>
+          <p className="text-neutral-300">Belum ada proyek pribadi.</p>
         )}
       </section>
 
       {/* Company Projects */}
-      <section className="flex flex-col gap-5 mt-10">
-        <h2 className="text-xl font-semibold">Company Projects</h2>
-        
+      <section className="flex flex-col gap-5 mt-1">
+        <h2 className="text-xl font-semibold">Proyek Perusahaan</h2>
+
         {companyProjects.length > 0 ? (
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {companyProjects.map((project) => (
@@ -65,11 +65,14 @@ export default function Projects() {
             ))}
           </ul>
         ) : (
-          <p className="text-neutral-300">No company projects available.</p>
+          <p className="text-neutral-300">Belum ada proyek perusahaan.</p>
         )}
       </section>
-
-      <Footer />
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Proyek - Arzaqul Mughny Al Fawwaz",
+  description: "Kumpulan proyek yang pernah saya buat, mulai dari eksperimen pribadi hingga pekerjaan profesional.",
+};

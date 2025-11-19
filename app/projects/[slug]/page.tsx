@@ -1,5 +1,6 @@
 import Title from "@/src/components/Title";
 import { getMarkdownBySlug, getMarkdownFiles } from "@/src/lib/markdown";
+import { Metadata } from "next";
 import { remark } from "remark";
 import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
@@ -60,4 +61,21 @@ export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const project = getMarkdownBySlug("src/projects", params.slug);
+
+  return {
+    title: project?.frontmatter?.title ?? "Proyek - Arza",
+    description: project?.frontmatter?.description ?? "Proyek oleh Arza.",
+    openGraph: {
+      title: project?.frontmatter?.title,
+      description: project?.frontmatter?.description,
+    },
+  };
 }

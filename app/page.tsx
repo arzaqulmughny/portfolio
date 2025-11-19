@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col gap-5">
-        <Title>Hi! I&#39;m Arza 👋</Title>
+        <Title>Halo, saya Arza👋</Title>
         <p className="text-neutral-300">
-          This is a space where I share the projects I’ve worked on and my
-          thoughts through blog posts. Everything here reflects my journey of
-          learning and growing in the world of technology.
+          Ini adalah ruang tempat saya membagikan proyek yang saya kerjakan dan
+          pemikiran saya melalui tulisan blog. Semuanya di sini mencerminkan
+          perjalanan saya dalam belajar dan berkembang di dunia teknologi.
         </p>
 
         <ul className="flex gap-4">
@@ -22,14 +22,16 @@ export default function Home() {
             <a
               href="https://www.linkedin.com/in/arzaqul/"
               className="text-sky-500 text-sm hover:underline"
+              target="_blank"
             >
               LinkedIn
             </a>
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/arzaqul/"
+              href="https://github.com/arzaqulmughny"
               className="text-sky-500 text-sm hover:underline"
+              target="_blank"
             >
               Github
             </a>
@@ -38,7 +40,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-5">
-        <Title>Latest articles</Title>
+        <Title>Artikel Terbaru</Title>
         {articles.length > 0 ? (
           <ul className="flex flex-col gap-4">
             {articles.map((article) => (
@@ -58,7 +60,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-5">
-        <Title>Featured Projects</Title>
+        <Title>Proyek Terbaru</Title>
         {projects.length > 0 ? (
           <ul className="flex flex-col gap-6">
             {projects.map((project) => (

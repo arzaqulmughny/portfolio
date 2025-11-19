@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ProjectItem({
   title,
   description,
@@ -10,12 +12,12 @@ export default function ProjectItem({
   showThumbnail?: boolean;
 }) {
   return (
-    <div>
+    <Link href={link}>
       <h2 className="font-medium text-neutral-500">{title}</h2>
       {showThumbnail && (
         <img src="https://i.ibb.co/1R3323n/laravel.png" alt="" />
       )}
       <p className="text-white">{description}</p>
-    </div>
+    </Link>
   );
 }

@@ -1,8 +1,19 @@
 import Footer from "@/src/components/Footer";
 import ProjectItem from "@/src/components/ProjectItem";
 import Title from "@/src/components/Title";
+import { getMarkdownFiles } from "@/src/lib/markdown";
 
 export default function Projects() {
+  const projects = getMarkdownFiles("src/projects");
+
+  const personalProjects = projects.filter(
+    (project) => project.frontmatter.category === "personal"
+  );
+
+  const companyProjects = projects.filter(
+    (project) => project.frontmatter.category === "company"
+  );
+
   return (
     <>
       <section className="flex flex-col gap-5">
@@ -17,73 +28,45 @@ export default function Projects() {
       {/* Personal Projects */}
       <section className="flex flex-col gap-5">
         <h2 className="text-xl font-semibold">Personal Projects</h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            {
-              title: "Finance Tracker",
-              description:
-                "A simple web-based financial tracking app built with Go and React to help manage personal expenses efficiently.",
-              link: "#",
-            },
-            {
-              title: "Blog Platform",
-              description:
-                "A markdown-based blogging platform where I share tutorials and developer insights, built using Laravel and Inertia.js.",
-              link: "#",
-            },
-            {
-              title: "Task Manager",
-              description:
-                "A lightweight task management tool designed for productivity and minimalism, built using Next.js.",
-              link: "#",
-            },
-          ].map((project, index) => (
-            <li key={index}>
-              <ProjectItem
-                title={project.title}
-                description={project.description}
-                link={project.link}
-                showThumbnail={true}
-              />
-            </li>
-          ))}
-        </ul>
+        
+        {personalProjects.length > 0 ? (
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {personalProjects.map((project) => (
+              <li key={project.slug}>
+                <ProjectItem
+                  title={project.frontmatter.title}
+                  description={project.frontmatter.description}
+                  link={`/projects/${project.slug}`}
+                  showThumbnail={true}
+                />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-neutral-300">No personal projects available.</p>
+        )}
       </section>
 
       {/* Company Projects */}
       <section className="flex flex-col gap-5 mt-10">
         <h2 className="text-xl font-semibold">Company Projects</h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            {
-              title: "ERP System",
-              description:
-                "A modular ERP system developed using Laravel and PostgreSQL to manage sales, purchasing, and inventory processes.",
-              link: "#",
-            },
-            {
-              title: "Warehouse Management Integration",
-              description:
-                "Developed stock synchronization logic between ERP and WMS, handling stock availability, in-transit goods, and real-time updates.",
-              link: "#",
-            },
-            {
-              title: "Internal Dashboard",
-              description:
-                "Built a React-based admin dashboard for monitoring logistics performance, using RESTful APIs and Tailwind UI.",
-              link: "#",
-            },
-          ].map((project, index) => (
-            <li key={index}>
-              <ProjectItem
-                title={project.title}
-                description={project.description}
-                link={project.link}
-                showThumbnail={true}
-              />
-            </li>
-          ))}
-        </ul>
+        
+        {companyProjects.length > 0 ? (
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {companyProjects.map((project) => (
+              <li key={project.slug}>
+                <ProjectItem
+                  title={project.frontmatter.title}
+                  description={project.frontmatter.description}
+                  link={`/projects/${project.slug}`}
+                  showThumbnail={true}
+                />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-neutral-300">No company projects available.</p>
+        )}
       </section>
 
       <Footer />

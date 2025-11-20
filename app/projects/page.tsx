@@ -17,17 +17,17 @@ export default function Projects() {
   return (
     <>
       <section className="flex flex-col gap-5">
-        <Title>Proyek</Title>
+        <Title>Projects</Title>
         <p className="text-neutral-300">
-          Kumpulan proyek yang pernah saya buat, mulai dari eksperimen pribadi hingga pekerjaan
-          profesional. Semuanya menjadi bagian dari perjalanan saya dalam
-          belajar dan membangun software yang bermanfaat.
+          A collection of projects I’ve built, from personal experiments to
+          professional work, all part of my journey in creating meaningful
+          software.
         </p>
       </section>
 
       {/* Personal Projects */}
       <section className="flex flex-col gap-5">
-        <h2 className="text-xl font-semibold">Proyek Pribadi</h2>
+        <h2 className="text-xl font-semibold">Personal Projects</h2>
 
         {personalProjects.length > 0 ? (
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -38,18 +38,19 @@ export default function Projects() {
                   description={project.frontmatter.description}
                   link={`/projects/${project.slug}`}
                   showThumbnail={true}
+                  thumbnailUrl={project.frontmatter.bannerUrl}
                 />
               </li>
             ))}
           </ul>
         ) : (
-          <p className="text-neutral-300">Belum ada proyek pribadi.</p>
+          <p className="text-neutral-500">No personal projects available.</p>
         )}
       </section>
 
       {/* Company Projects */}
       <section className="flex flex-col gap-5 mt-1">
-        <h2 className="text-xl font-semibold">Proyek Perusahaan</h2>
+        <h2 className="text-xl font-semibold">Company Projects</h2>
 
         {companyProjects.length > 0 ? (
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -60,12 +61,13 @@ export default function Projects() {
                   description={project.frontmatter.description}
                   link={`/projects/${project.slug}`}
                   showThumbnail={true}
+                  thumbnailUrl={project.frontmatter.bannerUrl}
                 />
               </li>
             ))}
           </ul>
         ) : (
-          <p className="text-neutral-300">Belum ada proyek perusahaan.</p>
+          <p className="text-neutral-500">No company projects available.</p>
         )}
       </section>
     </>
@@ -73,6 +75,7 @@ export default function Projects() {
 }
 
 export const metadata: Metadata = {
-  title: "Proyek - Arzaqul Mughny Al Fawwaz",
-  description: "Kumpulan proyek yang pernah saya buat, mulai dari eksperimen pribadi hingga pekerjaan profesional.",
+  title: "Projects - Arzaqul Mughny Al Fawwaz",
+  description:
+    "A collection of projects I’ve built, from personal experiments to professional work, part of my journey in creating software.",
 };

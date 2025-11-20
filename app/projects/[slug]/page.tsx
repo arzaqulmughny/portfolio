@@ -46,7 +46,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           />
 
           <div
-            className="markdown mt-5 prose prose-invert prose-headings:m-0 prose-headings:text-white"
+            className="markdown mt-5 prose prose-invert prose-headings:m-0 prose-headings:text-white w-full"
             dangerouslySetInnerHTML={{ __html: content }}
           />
         </div>
@@ -71,8 +71,8 @@ export async function generateMetadata({
   const project = getMarkdownBySlug("src/projects", params.slug);
 
   return {
-    title: project?.frontmatter?.title ?? "Proyek - Arza",
-    description: project?.frontmatter?.description ?? "Proyek oleh Arza.",
+    title: project?.frontmatter?.title ?? "Project - Arza",
+    description: project?.frontmatter?.description ?? "Project by Arza.",
     openGraph: {
       title: project?.frontmatter?.title,
       description: project?.frontmatter?.description,

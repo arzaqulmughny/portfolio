@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col gap-5">
-        <Title>Halo, saya Arza👋</Title>
+        <Title>Hello, I&apos;am Arza👋</Title>
         <p className="text-neutral-300">
-          Ini adalah ruang tempat saya membagikan proyek yang saya kerjakan dan
-          pemikiran saya melalui tulisan blog. Semuanya di sini mencerminkan
-          perjalanan saya dalam belajar dan berkembang di dunia teknologi.
+          I&apos;m a software engineer based in Indonesia. I enjoy building
+          web applications and solving complex problems. In my free time, I
+          like to share my knowledge and experience.
         </p>
 
         <ul className="flex gap-4">
@@ -40,7 +40,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-5">
-        <Title>Artikel Terbaru</Title>
+        <Title>Writing</Title>
         {articles.length > 0 ? (
           <ul className="flex flex-col gap-4">
             {articles.map((article) => (
@@ -60,7 +60,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-5">
-        <Title>Proyek Terbaru</Title>
+        <Title>Latest Projects</Title>
         {projects.length > 0 ? (
           <ul className="flex flex-col gap-6">
             {projects.map((project) => (

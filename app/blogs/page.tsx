@@ -3,7 +3,6 @@ import Title from "@/src/components/Title";
 import { getMarkdownFiles } from "@/src/lib/markdown";
 import type { Metadata } from "next";
 
-
 export default function Page() {
   const articles = getMarkdownFiles("src/articles");
 
@@ -12,9 +11,8 @@ export default function Page() {
       <section className="flex flex-col gap-5">
         <Title>Blog</Title>
         <p className="text-neutral-300">
-          Kumpulan artikel yang saya tulis untuk membagi pengetahuan dan
-          pengalaman tentang teknologi, pengembangan perangkat lunak, dan dunia
-          kerja.
+          A collection of articles sharing insights on tech, software
+          development, and work life.
         </p>
       </section>
 
@@ -38,5 +36,6 @@ export default function Page() {
 
 export const metadata: Metadata = {
   title: "Blog - Arzaqul Mughny Al Fawwaz",
-  description: "Kumpulan artikel yang saya tulis untuk membagi pengetahuan dan pengalaman tentang teknologi, pengembangan perangkat lunak, dan dunia kerja.",
+  description:
+    "Kumpulan artikel yang saya tulis untuk membagi pengetahuan dan pengalaman tentang teknologi, pengembangan perangkat lunak, dan dunia kerja.",
 };

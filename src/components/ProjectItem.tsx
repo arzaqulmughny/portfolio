@@ -5,19 +5,21 @@ export default function ProjectItem({
   description,
   link,
   showThumbnail = false,
+  thumbnailUrl,
 }: {
   title: string;
   description: string;
   link: string;
   showThumbnail?: boolean;
+  thumbnailUrl?: string;
 }) {
   return (
-    <Link href={link}>
-      <h2 className="font-medium text-neutral-500">{title}</h2>
-      {showThumbnail && (
-        <img src="https://i.ibb.co/1R3323n/laravel.png" alt="" />
+    <Link href={link} className="flex flex-col gap-3">
+      {showThumbnail && thumbnailUrl && (
+        <img src={thumbnailUrl} alt={title} />
       )}
-      <p className="text-white">{description}</p>
+      <h2 className="font-medium text-white">{title}</h2>
+      <p className="text-neutral-400">{description}</p>
     </Link>
   );
 }

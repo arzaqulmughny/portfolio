@@ -4,7 +4,7 @@ export default function Navbar() {
   const links = [
     {
       'href': '/',
-      'title': 'Beranda'
+      'title': 'Home'
     },
     {
       'href': '/blogs',
@@ -12,11 +12,11 @@ export default function Navbar() {
     },
     {
       'href': '/projects',
-      'title': 'Proyek'
+      'title': 'Projects'
     },
     {
       'href': '/about',
-      'title': 'Tentang Saya'
+      'title': 'About Me'
     },
   ];
 

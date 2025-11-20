@@ -5,52 +5,42 @@ export default function Page() {
   return (
     <>
       <section className="flex flex-col gap-5">
-        <Title>Tentang Saya</Title>
+        <Title>About Me</Title>
         <p className="text-neutral-300">
-          Saya seorang web programmer yang fokus berkembang dan mendorong cara
-          kerja tim yang lebih matang. Saya senang berbagi wawasan, berdiskusi
-          tentang ide baru, dan membantu melihat peluang peningkatan. Bagi saya,
-          belajar dan bertukar pengalaman adalah kunci untuk tumbuh bersama di
-          dunia teknologi.
+          I am a web programmer focused on growing and encouraging a more mature
+          team workflow. I enjoy sharing insights, discussing new ideas, and
+          helping identify opportunities for improvement. For me, learning and
+          exchanging experiences are key to growing together in the tech world.
         </p>
         <p className="text-neutral-400 text-sm">
-          📍 Saat ini berlokasi di Surabaya
+          📍 Currently based in Surabaya
         </p>
       </section>
 
       <section className="flex flex-col gap-5">
-        <Title>Pengalaman</Title>
+        <Title>Experience</Title>
         <ul className="flex flex-col gap-3 text-neutral-300">
           <li>
             <strong className="text-white">Web Programmer</strong> — PT Xeno
-            Persada Teknologi (Januari 2024 - Saat ini)
-            <br />
-            Menjadi bagian dari tim pengembangan web dan mendukung proses
-            pengembangan aplikasi.
+            Persada Teknologi (January 2024 - Present)
           </li>
           <li>
             <strong className="text-white">
               Project-Based Virtual Intern Front End Developer
             </strong>{" "}
             — Core Initiative x Rakamin Academy (September 2023)
-            <br />
-            Menyelesaikan beberapa tugas sebagai Front End Web Developer,
-            seperti membuat website yang menggunakan data dari RESTful API dan
-            memakai tools umum seperti Docker sebagai lingkungan pengembangan.
           </li>
         </ul>
       </section>
 
       <section className="flex flex-col gap-5">
-        <Title>Sertifikat</Title>
+        <Title>Certificates</Title>
         <ul className="list-disc list-inside flex flex-col gap-1 text-neutral-300">
           <li>
-            Belajar Fundamental Aplikasi Web dengan React — Dicoding Indonesia
-            (2023)
+            Fundamental Web Application Development with React — Dicoding
+            Indonesia (2023)
           </li>
-          <li>
-            Belajar Pengembangan Web Intermediate — Dicoding Indonesia (2022)
-          </li>
+          <li>Intermediate Web Development — Dicoding Indonesia (2022)</li>
         </ul>
       </section>
 
@@ -69,20 +59,20 @@ export default function Page() {
       </section>
 
       <section className="flex flex-col gap-5">
-        <Title>Pendidikan</Title>
+        <Title>Education</Title>
         <ul className="flex flex-col gap-3 text-neutral-300">
           <li>
-            <strong className="text-white">Sistem Informasi</strong> —
-            Universitas Terbuka (Agustus 2024 – Saat ini)
+            <strong className="text-white">Information System</strong> —
+            Universitas Terbuka (August 2024 - Present)
           </li>
         </ul>
       </section>
 
       <section className="flex flex-col gap-5">
-        <Title>Kontak</Title>
+        <Title>Contact</Title>
         <p className="text-neutral-300">
-          Jangan ragu untuk menghubungi saya untuk kolaborasi, pekerjaan
-          freelance, atau sekadar berkenalan!
+          Feel free to reach out for collaboration, freelance work, or just to
+          connect!
         </p>
         <ul className="flex flex-col gap-1 text-neutral-400">
           <li>
@@ -115,6 +105,7 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: "Tentang Saya - Arzaqul Mughny Al Fawwaz",
-  description: "Tentang saya, Arzaqul Mughny Al Fawwaz, seorang web programmer yang fokus berkembang dan mendorong cara kerja tim yang lebih matang.",
+  title: "About Me - Arzaqul Mughny Al Fawwaz",
+  description:
+    "About me, Arzaqul Mughny Al Fawwaz, a web programmer focused on growing and encouraging a more mature team workflow.",
 };

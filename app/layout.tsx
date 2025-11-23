@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arzaqul Mughny Al Fawwaz",
+  title: {
+    default: "Arzaqul Mughny Al Fawwaz",
+    template: "%s | Arzaqul Mughny Al Fawwaz",
+  },
   description: "Portofolio Arzaqul Mughny Al Fawwaz",
 };
 

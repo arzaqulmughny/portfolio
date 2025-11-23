@@ -72,8 +72,8 @@ export async function generateMetadata({
   const article = getMarkdownBySlug("src/articles", params.slug);
 
   return {
-    title: article?.frontmatter?.title ?? "Blog - Arza",
-    description: article?.frontmatter?.description ?? "Artikel oleh Arza.",
+    title: article?.frontmatter?.title ?? "Blog",
+    description: article?.frontmatter?.description ?? "Article by Arza",
     openGraph: {
       title: article?.frontmatter?.title,
       description: article?.frontmatter?.description,

@@ -95,7 +95,7 @@ export default function Page() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              github.com/arzaqul
+              github.com/arzaqulmughny
             </a>
           </li>
         </ul>

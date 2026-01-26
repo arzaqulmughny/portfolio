@@ -26,11 +26,11 @@ export default function Projects() {
       </section>
 
       {/* Company Projects */}
-      <section className="flex flex-col gap-5 mt-1">
+      <section className="flex flex-col gap-5">
         <h2 className="text-xl font-semibold">Company Projects</h2>
 
         {companyProjects.length > 0 ? (
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-15">
             {companyProjects.map((project) => (
               <li key={project.slug}>
                 <ProjectItem
@@ -49,7 +49,7 @@ export default function Projects() {
       </section>
 
       {/* Personal Projects */}
-      <section className="flex flex-col gap-5">
+      <section className="flex flex-col gap-5 mt-10">
         <h2 className="text-xl font-semibold">Personal Projects</h2>
 
         {personalProjects.length > 0 ? (

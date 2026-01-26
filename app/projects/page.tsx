@@ -25,29 +25,6 @@ export default function Projects() {
         </p>
       </section>
 
-      {/* Personal Projects */}
-      <section className="flex flex-col gap-5">
-        <h2 className="text-xl font-semibold">Personal Projects</h2>
-
-        {personalProjects.length > 0 ? (
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-15">
-            {personalProjects.map((project) => (
-              <li key={project.slug}>
-                <ProjectItem
-                  title={project.frontmatter.title}
-                  description={project.frontmatter.description}
-                  link={`/projects/${project.slug}`}
-                  showThumbnail={true}
-                  thumbnailUrl={project.frontmatter.bannerUrl}
-                />
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="text-neutral-500">No personal projects available.</p>
-        )}
-      </section>
-
       {/* Company Projects */}
       <section className="flex flex-col gap-5 mt-1">
         <h2 className="text-xl font-semibold">Company Projects</h2>
@@ -68,6 +45,29 @@ export default function Projects() {
           </ul>
         ) : (
           <p className="text-neutral-500">No company projects available.</p>
+        )}
+      </section>
+
+      {/* Personal Projects */}
+      <section className="flex flex-col gap-5">
+        <h2 className="text-xl font-semibold">Personal Projects</h2>
+
+        {personalProjects.length > 0 ? (
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-15">
+            {personalProjects.map((project) => (
+              <li key={project.slug}>
+                <ProjectItem
+                  title={project.frontmatter.title}
+                  description={project.frontmatter.description}
+                  link={`/projects/${project.slug}`}
+                  showThumbnail={true}
+                  thumbnailUrl={project.frontmatter.bannerUrl}
+                />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-neutral-500">No personal projects available.</p>
         )}
       </section>
     </>

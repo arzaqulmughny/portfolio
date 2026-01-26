@@ -4,13 +4,11 @@ description: "Platform for buying and selling between vendors, especially for he
 author: "PT. Xeno Persada Teknologi"
 category: "company"
 date: "2023-02-14"
-bannerUrl: "/images/projects/restaurant-catalogue/1.png"
+bannerUrl: "/images/projects/sibima-b2b-marketplace/login.png"
 tags:
   - laravel
   - nextjs
 ---
-
-![Screenshot](/images/projects/sibima-b2b-marketplace/login.png)
 
 ## Project Overview
 - **Project Name**: SIBIMA  

@@ -67,9 +67,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const article = getMarkdownBySlug("src/articles", params.slug);
+  const { slug } = await params;
+  const article = getMarkdownBySlug("src/articles", slug);
 
   return {
     title: article?.frontmatter?.title ?? "Blog",

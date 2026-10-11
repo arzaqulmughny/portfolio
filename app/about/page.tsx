@@ -47,7 +47,7 @@ export default function Page() {
       <section className="flex flex-col gap-5">
         <Title>Tech Stack</Title>
         <div className="flex flex-wrap gap-2 text-neutral-200">
-          {["Laravel", "React", "PostgreSQL", "MySQL"].map((tech) => (
+          {["Laravel", "React.js", "Next.js", "Go", "Fiber", "PostgreSQL", "MySQL"].map((tech) => (
             <span
               key={tech}
               className="px-3 py-1 bg-neutral-800 border border-neutral-700 rounded text-sm"
@@ -65,6 +65,10 @@ export default function Page() {
             <strong className="text-white">Information System</strong> —
             Universitas Terbuka (August 2024 - Present)
           </li>
+          <li>
+            <strong className="text-white">Computer and Network Engineer</strong> —
+            SMKN 1 Pasuruan (January 2019 - January 2022)
+          </li>
         </ul>
       </section>
 
@@ -76,7 +80,7 @@ export default function Page() {
         </p>
         <ul className="flex flex-col gap-1 text-neutral-400">
           <li>
-            📧 <a href="mailto:zaarza03@gmail.com">zaarza03@gmail.com</a>
+            📧 <a href="mailto:arzaqul.dev@gmail.com">arzaqul.dev@gmail.com</a>
           </li>
           <li>
             💼{" "}

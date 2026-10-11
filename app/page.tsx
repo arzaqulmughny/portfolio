@@ -12,12 +12,37 @@ export default function Home() {
       <section className="flex flex-col gap-5">
         <Title>Hello, I&apos;am Arza👋</Title>
         <p className="text-neutral-300">
-          I&apos;m a software engineer based in Indonesia. I enjoy building
-          web applications and solving complex problems. In my free time, I
-          like to share my knowledge and experience.
+          I&apos;m a software engineer based in Indonesia. I enjoy building web
+          applications and solving complex problems. In my free time, I like to
+          share my knowledge and experience.
+        </p>
+        <p className="text-neutral-300">
+          I&apos;m currently open to new opportunities where I can contribute my
+          skills, grow as a software engineer, and build impactful web
+          applications. Feel free to reach out if you&apos;re looking for a
+          developer to join your team or collaborate on a project.
         </p>
 
         <ul className="flex gap-4">
+          <li>
+            <a
+              href="https://docs.google.com/document/d/1qCu7fx35izZEI3tY-46sj7UGhJhLBONniEkDobK_yZk/export?format=pdf"
+              className="text-sky-500 text-sm hover:underline"
+              target="_blank"
+              download="Arzaqul Mughny - Resume"
+            >
+              Resume
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.figma.com/deck/895WvwjVeLF6iLntZ1EadF/Arzaqul-Mughny---Portfolio-2026?node-id=1-27&t=TffCbE2xF5S6kZ68-1"
+              className="text-sky-500 text-sm hover:underline"
+              target="_blank"
+            >
+              Portfolio
+            </a>
+          </li>
           <li>
             <a
               href="https://www.linkedin.com/in/arzaqul/"
